@@ -1,0 +1,28 @@
+﻿
+
+
+<form  method="post" action="/home/CreateHotel" asp-antiforgery="true" >
+
+    <label  class="row btn  col-md-3 m-3" style="background-color:ButtonFace;" autocomplete="off" >
+        نام هتل
+        <input name="HotelName" type="text" autocomplete="off" placeholder="Please enter name"/>
+    </label>
+    <br />
+    <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+        چند ستاره
+        <input name="HotelStar" type="text" autocomplete="off" placeholder="Please enter Star"/>
+    </label>
+    <br />
+    <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+        تعداد تخت
+        <input name="HotelBads" type="text" autocomplete="off" placeholder="Please enter Beds"/>
+    </label>
+   
+    <label class="row btn   col-lg-4 m-3 " style="background-color:ButtonFace;" >
+        ادرس هتل 
+        <input name="HotelAddress" type="text" autocomplete="off" placeholder="Please enter Address"/>
+    </label>
+    
+    <button type="submit" class="btn btn-danger">Save</button>
+
+</form>

@@ -1,0 +1,42 @@
+﻿@model Hotel
+
+<form method="post" action="\home\UpdateHotel" asp-antiforgery="true">
+    <input type="hidden" name="@nameof(Model.HotelId)" value="@Model.HotelId" />
+    <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+        نام هتل
+        <input name="HotelName" type="text" name="@nameof(Model.HotelName)" value="@Model.HotelName" />
+    </label>
+    <br />
+    <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+        چند ستاره
+        <input name="HotelStar" type="text" name="@nameof(Model.HotelStar)" value="@Model.HotelStar" />
+    </label>
+    <br />
+    <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+        تعداد تخت
+        <input name="HotelBads" type="text" name="@nameof(Model.HotelBads)" value="@Model.HotelBads" />
+    </label>
+
+    <label class="row btn   col-lg-5 m-3 " style="background-color:ButtonFace;">
+        ادرس هتل
+        <input name="HotelAddress" type="text" name="@nameof(Model.HotelAddress)" value="@Model.HotelAddress" />
+    </label>
+    <button type="submit" class="btn btn-danger">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"></path>
+        </svg>
+        edit
+    </button>
+</form>
+
+
+
+
+@*<form method="post" action="/Home/UpdateHotel">
+    <div>
+    <input class="row" class="btn-primary"/>
+    <button>Edit</button>
+    </div>
+
+    </form>*@
+

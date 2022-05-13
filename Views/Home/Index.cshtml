@@ -1,0 +1,77 @@
+﻿@model List<Hotel>
+
+@{
+    ViewData["Title"] = "هتل";
+}
+@{
+    ViewBag.Message = "Error not Create Peroperty";
+}
+
+
+<div class="text-center">
+    <h1 class="display-5 btn btn-danger">به رزرو هتل خوش امدید</h1>
+    @*    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>*@
+</div>
+
+<div>
+    <a class="col-2 btn btn-primary m-2"  onclick="CreateHotelNew()">
+        <img src="https://www.svgrepo.com/show/48369/plus-sign.svg" intrinsicsize="512 x 512" width="20" height="20" srcset="https://www.svgrepo.com/show/48369/plus-sign.svg 4x" alt="Plus Sign SVG Vector" title="Plus Sign SVG Vector">
+        افزودن هتل
+    </a>
+
+</div>
+  
+<table class="table table-dark table-striped ">
+
+    <thead>
+        <tr>
+            <th>ادرس هتل</th>
+            <th>چند تخته خواب</th>
+            <th>چند ستاره</th>
+            <th>اسم هتل</th>
+            <th>Id</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.HotelAddress</td>
+                <td>@item.HotelBads</td>
+                <td>@item.HotelStar</td>
+                <td>@item.HotelName</td>
+                <td>@item.HotelId</td>
+                <td>
+<<<<<<< HEAD
+                    <a asp-controller="Home" asp-action="UpdateHotel" asp-route-id="@item.HotelId" class="col-7  btn btn-warning m-2" style="font-size:12px">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+=======
+                    <a asp-controller="Home" asp-action="UpdateHotel" asp-route-id="@item.HotelId" class="col-7  btn btn-warning m-1"  style="font-size:12px" >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16"  >
+>>>>>>> 6d873aaef11ecf97ffb69e6730bb3f2ec425fa3d
+                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"></path>
+                        </svg>
+                        ویرایش کردن
+                    </a>
+
+<<<<<<< HEAD
+                    <a asp-controller="Home" asp-action="DeleteHotel" asp-route-id="@item.HotelId" class=" col-7 nav-link btn  m-2" style="background-color:peru; font-size:12px">
+=======
+                    <a asp-controller="Home" asp-action="DeleteHotel" asp-route-id="@item.HotelId" class=" col-7 nav-link btn  m-1" style="background-color:peru; font-size:12px" >
+>>>>>>> 6d873aaef11ecf97ffb69e6730bb3f2ec425fa3d
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash" viewBox="0 0 16 16">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                        </svg>
+                        پاک کردن
+                    </a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+

@@ -1,0 +1,96 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Hotel</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/Hotel.styles.css" asp-append-version="true" />
+</head>
+<body class="account">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand btn btn-warning" asp-area="" asp-controller="Home" asp-action="Index">الو هتل</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        @* <li class="nav-item">
+                            <a class="nav-link btn btn-danger  m-2" asp-area="" asp-controller="Home" asp-action="Index">رزرو هتل</a>
+                            </li>*@
+                        @* <li class="nav-item">
+                            <a class="nav-link btn btn-primary m-2" asp-area="" asp-controller="Home" asp-action="CreateHotel" data-toggle="modal" data-target="CreateHotelModal">
+                            <img src="https://www.svgrepo.com/show/48369/plus-sign.svg" intrinsicsize="512 x 512" width="20" height="20" srcset="https://www.svgrepo.com/show/48369/plus-sign.svg 4x" alt="Plus Sign SVG Vector" title="Plus Sign SVG Vector">
+                            افزودن هتل
+                            </a>
+                            </li>*@
+
+                        @*    <li class="nav-item">
+                            <a class="nav-link btn btn-danger m-2" asp-area="" asp-controller="Home" asp-action="UpdateHotel">ویرایش کردن </a>
+                            </li>*@
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!-- Modal preview files -->
+    <div class="modal fade" id="CreateHotelModal" tabindex="-1" role="dialog" aria-labelledby="CreateHotelModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">  افزودن هتل  </h5>
+
+                </div>
+                <div class="modal-body">
+                    <form method="post" action="/home/CreateHotel">
+
+                        <label class="row btn  col-md-3 m-3" style="background-color:ButtonFace;" autocomplete="off">
+                            نام هتل
+                            <input name="HotelName" type="text" autocomplete="off" placeholder="Please enter name" />
+                        </label>
+                        <br />
+                        <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+                            چند ستاره
+                            <input name="HotelStar" type="text" autocomplete="off" placeholder="Please enter Star" />
+                        </label>
+                        <br />
+                        <label class="row btn   col-lg-3 m-3 " style="background-color:ButtonFace;">
+                            تعداد تخت
+                            <input name="HotelBads" type="text" autocomplete="off" placeholder="Please enter Beds" />
+                        </label>
+
+                        <label class="row btn   col-lg-4 m-3 " style="background-color:ButtonFace;">
+                            ادرس هتل
+                            <input name="HotelAddress" type="text" autocomplete="off" placeholder="Please enter Address" />
+                        </label>
+
+                        <button type="submit" class="btn btn-danger">Save</button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* <footer class="border-top footer text-muted">
+        <div class="container">
+        &copy; @(DateTime.Now.Year)- <a asp-area="" asp-controller="Home" asp-action="Privacy">Hotel</a>
+        </div>
+        </footer>*@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

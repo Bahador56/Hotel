@@ -1,0 +1,22 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/*.account {
+    background-image: url('/images/backgrund/Jowhareh_galleries_poster_0fab5a88-5f95-4f66-8545-a4eefca38143.jpeg');
+    background-position: center;
+}*/
